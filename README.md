@@ -1,1 +1,2 @@
-# puzzle-parallel-2015
+# Demo code to solve the 15 puzzle
+
