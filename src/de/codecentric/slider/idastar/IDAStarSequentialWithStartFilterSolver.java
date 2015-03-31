@@ -9,8 +9,6 @@ import de.codecentric.slider.util.SliderBoard;
 import de.codecentric.slider.util.Solver;
 import de.codecentric.slider.util.filter.DontGoBackFilter;
 import de.codecentric.slider.util.filter.NodeFilter;
-import de.codecentric.slider.util.filter.VisitedSetFilter;
-import de.codecentric.slider.util.set.SimpleHashSet;
 
 public class IDAStarSequentialWithStartFilterSolver implements Solver {
     private static class SearchResult {
@@ -46,7 +44,7 @@ public class IDAStarSequentialWithStartFilterSolver implements Solver {
 	IDAStarNode solutionNode = null;
 	while (solutionNode == null) {
 	    // The first filter has to be recreated for every depth
-	    hashSetFilter = new VisitedSetFilter<>(new SimpleHashSet());
+	    hashSetFilter = new ShortestWinsFilter<>();
 //	    System.out.println("bound: " + bound + ", time used: " + (System.currentTimeMillis() - startTime) / 1000.0 + "s");
 	    SearchResult r = search(root, bound);
 	    if (r.solutionNode != null) {
