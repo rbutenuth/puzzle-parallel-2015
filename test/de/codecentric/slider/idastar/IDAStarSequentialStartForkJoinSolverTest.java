@@ -40,20 +40,29 @@ public class IDAStarSequentialStartForkJoinSolverTest extends AbstractSolverTest
     public void testDistance20_0() {
 	testSolver(new IDAStarSequentialStartForkJoinSolver(0, 6), 20);
     }
+    
     @Test
     public void testDistance20_1() {
 	testSolver(new IDAStarSequentialStartForkJoinSolver(1, 6), 20);
     }
+    
     @Test
     public void testDistance20_2() {
 	testSolver(new IDAStarSequentialStartForkJoinSolver(2, 6), 20);
     }
+    
     @Test
     public void testDistance20_3() {
 	testSolver(new IDAStarSequentialStartForkJoinSolver(3, 6), 20);
     }
+    
     @Test
     public void testDistance20_4() {
 	testSolver(new IDAStarSequentialStartForkJoinSolver(4, 6), 20);
+    }
+    
+    @Test
+    public void testDistance40_4() {
+	testSolver(new IDAStarSequentialStartForkJoinSolver(4, 6), 40);
     }
 }
